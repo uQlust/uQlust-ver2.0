@@ -1,0 +1,74 @@
+PDB data file name: /home/raad/work/gitUQlustTMP/uQlust-ver1.0/data/rna/1a4d_/1a4d_RNA.pdb
+uncommon residue  RG    1  on chain   [#1] assigned to: g
+uncommon residue  RG    2  on chain   [#2] assigned to: g
+uncommon residue  RC    3  on chain   [#3] assigned to: c
+uncommon residue  RC    4  on chain   [#4] assigned to: c
+uncommon residue  RG    5  on chain   [#5] assigned to: g
+uncommon residue  RA    6  on chain   [#6] assigned to: a
+uncommon residue  RU    7  on chain   [#7] assigned to: u
+uncommon residue  RG    8  on chain   [#8] assigned to: g
+uncommon residue  RG    9  on chain   [#9] assigned to: g
+uncommon residue  RU   10  on chain   [#10] assigned to: u
+uncommon residue  RA   11  on chain   [#11] assigned to: a
+uncommon residue  RG   12  on chain   [#12] assigned to: g
+uncommon residue  RU   13  on chain   [#13] assigned to: u
+uncommon residue  RG   14  on chain   [#14] assigned to: g
+uncommon residue  RU   15  on chain   [#15] assigned to: u
+uncommon residue  RG   16  on chain   [#16] assigned to: g
+uncommon residue  RG   17  on chain   [#17] assigned to: g
+uncommon residue  RG   18  on chain   [#18] assigned to: g
+uncommon residue  RG   19  on chain   [#19] assigned to: g
+uncommon residue  RU   20  on chain   [#20] assigned to: u
+uncommon residue  RC   21  on chain   [#21] assigned to: c
+uncommon residue  RU   22  on chain   [#22] assigned to: u
+uncommon residue  RC   23  on chain   [#23] assigned to: c
+uncommon residue  RC   24  on chain   [#24] assigned to: c
+uncommon residue  RC   25  on chain   [#25] assigned to: c
+uncommon residue  RC   26  on chain   [#26] assigned to: c
+uncommon residue  RA   27  on chain   [#27] assigned to: a
+uncommon residue  RU   28  on chain   [#28] assigned to: u
+uncommon residue  RG   29  on chain   [#29] assigned to: g
+uncommon residue  RC   30  on chain   [#30] assigned to: c
+uncommon residue  RG   31  on chain   [#31] assigned to: g
+uncommon residue  RA   32  on chain   [#32] assigned to: a
+uncommon residue  RG   33  on chain   [#33] assigned to: g
+uncommon residue  RA   34  on chain   [#34] assigned to: a
+uncommon residue  RG   35  on chain   [#35] assigned to: g
+uncommon residue  RU   36  on chain   [#36] assigned to: u
+uncommon residue  RA   37  on chain   [#37] assigned to: a
+uncommon residue  RG   38  on chain   [#38] assigned to: g
+uncommon residue  RG   39  on chain   [#39] assigned to: g
+uncommon residue  RC   40  on chain   [#40] assigned to: c
+uncommon residue  RC   41  on chain   [#41] assigned to: c
+BEGIN_base-pair
+     1_41,  :     1 g-c    41  : +/+ cis         XIX
+     2_40,  :     2 g-c    40  : +/+ cis         XIX
+     3_39,  :     3 c-g    39  : +/+ cis         XIX
+     4_38,  :     4 c-g    38  : +/+ cis         XIX
+     5_37,  :     5 g-a    37  : S/H tran        XI
+     6_36,  :     6 a-u    36  : H/W tran        XXIV
+     7_35,  :     7 u-g    35  : H/W tran        n/a
+     9_33,  :     9 g-g    33  : W/H tran        VII
+    10_32,  :    10 u-a    32  : W/H tran        XXIV
+    11_31,  :    11 a-g    31  : H/S tran        XI
+    12_30,  :    12 g-c    30  : +/+ cis         XIX
+    13_29,  :    13 u-g    29  : W/W cis         XXVIII
+    14_28,  :    14 g-u    28  : W/W cis         XXVIII
+    15_27,  :    15 u-a    27  : -/- cis         XX
+    16_26,  :    16 g-c    26  : +/+ cis         XIX
+    17_25,  :    17 g-c    25  : +/+ cis         XIX
+    18_24,  :    18 g-c    24  : +/+ cis         XIX
+    26_27,  :    26 c-a    27  :      stacked
+    27_28,  :    27 a-u    28  :      stacked
+    29_30,  :    29 g-c    30  :      stacked
+    36_37,  :    36 u-a    37  :      stacked
+     8_34,  :     8 g-a    34  : H/W cis         !1H(b_b).
+    19_23,  :    19 g-c    23  : W/W cis         !1H(b_b).
+END_base-pair
+  The total base pairs =  17 (from   41 bases)
+------------------------------------------------
+ Standard  WW--cis  WW-tran  HH--cis  HH-tran  SS--cis  SS-tran
+        9        2        0        0        0        0        0
+  WH--cis  WH-tran  WS--cis  WS-tran  HS--cis  HS-tran
+        0        4        0        0        0        2
+------------------------------------------------
