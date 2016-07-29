@@ -1,5 +1,5 @@
 ########## This is the overall config file for uQlust ##########
-##########               uQlust ver. 1.0              ##########
+##########               uQlust ver. 2.0              ##########
 ########## Based on Adamczak and Meller 2011, 2015    ##########
 ########## Please see uQlust_manual.pdf for details   ##########
 ##########    Beware of broken lines. Good luck!      ##########
@@ -35,7 +35,7 @@ Distance measures used for clustering# COSINE
 Needed for aglomerative clustering, defines type of linkage# AVERAGE
 ########## End ##########
 ########## Parameters Hash ##########
-Percent of data that must be in the relevant clusters# 90
+Percent of data that must be in the relevant clusters# 100
 Number of relevant clusters# 1000
 Profile name# profiles/FragBag.profiles
 Combine clusters based on the hamming distance between them# True
