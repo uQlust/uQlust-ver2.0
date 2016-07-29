@@ -1640,7 +1640,7 @@ const MChain& MProtein::GetChain(char inChainID) const
 	
 	return 0;
 	//throw mas_exception("Chain not found");
-	return *mChains.front();
+//	return *mChains.front();
 }
 
 MChain& MProtein::GetChain(char inChainID)
