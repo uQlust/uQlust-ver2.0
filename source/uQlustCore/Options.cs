@@ -252,7 +252,7 @@ namespace uQlustCore
             //string dir = Environment.GetEnvironmentVariable("CLUSTER");
             string dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-            if (dir != null && !defaultFileName.Contains(dir))
+            if (dir != null && !defaultFileName.Contains(Path.DirectorySeparatorChar))
                 defaultFileName = dir + Path.DirectorySeparatorChar + defaultFileName;
 
             return defaultFileName;

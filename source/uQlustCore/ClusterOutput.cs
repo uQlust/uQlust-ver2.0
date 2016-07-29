@@ -422,7 +422,7 @@ namespace uQlustCore
             else
                 profilesDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             
-            if (!gFileName.Contains(dir))
+            if (!gFileName.Contains(Path.DirectorySeparatorChar.ToString()))
             {
                 gFileName = dir + Path.DirectorySeparatorChar + gFileName;
             }
