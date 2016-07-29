@@ -7,7 +7,6 @@ Temporary directory, needed when dcd file is used#
 Path to profiles definition file, needed when 1djury is used# 
 Path to profiles definition file, needed when 1djury measure is used# 
 Cluster algorithm to be used (available: uQlustTree, HKmeans, HierarchicalCluster, FastHCluster, Kmeans, ThresholdCluster, Jury1D, Jury3D, Sift)# Jury1D;
-# C:\Projects\uQlust2\uQlust\bin\Release\default.options
 ########## Parameters hierarchical ##########
 K-means algorithm: Value of DB index# 1.4
 Hierarchical K-means algorithm: Minimal number of structures in the node, below that number noew nodes will# 40

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowDistances));
             this.distanceControl1 = new Graph.DistanceControl();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,9 +45,18 @@
             // 
             this.distanceControl1.CAtoms = uQlustCore.PDB.PDBMODE.ONLY_CA;
             this.distanceControl1.distDef = uQlustCore.DistanceMeasures.HAMMING;
+            this.distanceControl1.HideAtoms = false;
+            this.distanceControl1.HideCosine = false;
+            this.distanceControl1.HideHamming = false;
+            this.distanceControl1.hideReference = false;
+            this.distanceControl1.HideRmsdLike = false;
+            this.distanceControl1.hideSetup = false;
             this.distanceControl1.Location = new System.Drawing.Point(3, 31);
             this.distanceControl1.Name = "distanceControl1";
+            this.distanceControl1.profileInfo = true;
             this.distanceControl1.profileName = null;
+            this.distanceControl1.reference = true;
+            this.distanceControl1.referenceProfile = null;
             this.distanceControl1.Size = new System.Drawing.Size(461, 108);
             this.distanceControl1.TabIndex = 0;
             // 
@@ -132,6 +142,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.distanceControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ShowDistances";
             this.Text = "ShowDistances";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

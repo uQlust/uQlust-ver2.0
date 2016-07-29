@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFraction));
             this.jury1D = new System.Windows.Forms.CheckBox();
             this.Rmsd = new System.Windows.Forms.RadioButton();
             this.MaxSub = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.GDT_TS = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -39,7 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.numClusters = new System.Windows.Forms.NumericUpDown();
             this.jury1DSetup1 = new Graph.jury1DSetup();
-            this.GDT_TS = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numClusters)).BeginInit();
             this.SuspendLayout();
@@ -89,6 +90,17 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Distance for best model search";
+            // 
+            // GDT_TS
+            // 
+            this.GDT_TS.AutoSize = true;
+            this.GDT_TS.Location = new System.Drawing.Point(235, 19);
+            this.GDT_TS.Name = "GDT_TS";
+            this.GDT_TS.Size = new System.Drawing.Size(68, 17);
+            this.GDT_TS.TabIndex = 4;
+            this.GDT_TS.TabStop = true;
+            this.GDT_TS.Text = "GDT_TS";
+            this.GDT_TS.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -159,17 +171,6 @@
             this.jury1DSetup1.TabIndex = 0;
             this.jury1DSetup1.Visible = false;
             // 
-            // GDT_TS
-            // 
-            this.GDT_TS.AutoSize = true;
-            this.GDT_TS.Location = new System.Drawing.Point(235, 19);
-            this.GDT_TS.Name = "GDT_TS";
-            this.GDT_TS.Size = new System.Drawing.Size(68, 17);
-            this.GDT_TS.TabIndex = 4;
-            this.GDT_TS.TabStop = true;
-            this.GDT_TS.Text = "GDT_TS";
-            this.GDT_TS.UseVisualStyleBackColor = true;
-            // 
             // FormFraction
             // 
             this.AcceptButton = this.button2;
@@ -186,6 +187,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.jury1D);
             this.Controls.Add(this.jury1DSetup1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormFraction";
             this.Text = "Fraction of good";
             this.groupBox1.ResumeLayout(false);

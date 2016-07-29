@@ -116,6 +116,12 @@ namespace Graph
             try
             {
                 setCheck.Load();
+                if (!Directory.Exists(setCheck.profilesDir))
+                {
+                    MessageBox.Show("Directory for generated profiles:" + setCheck.profilesDir + " cannot be found\n You must provide correct directory!");
+                    SetSettings(false);
+                }
+
             }
             catch
             {

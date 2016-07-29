@@ -225,6 +225,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "visHierar";
             this.Text = "Hierarchical visualization";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);

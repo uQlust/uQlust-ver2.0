@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KMeansForm));
             this.juryRadio = new System.Windows.Forms.RadioButton();
             this.randomRadio = new System.Windows.Forms.RadioButton();
             this.label17 = new System.Windows.Forms.Label();
@@ -163,6 +164,7 @@
             this.distanceControl1.hideSetup = false;
             this.distanceControl1.Location = new System.Drawing.Point(12, 226);
             this.distanceControl1.Name = "distanceControl1";
+            this.distanceControl1.profileInfo = true;
             this.distanceControl1.profileName = null;
             this.distanceControl1.reference = true;
             this.distanceControl1.referenceProfile = null;
@@ -207,6 +209,7 @@
             this.Controls.Add(this.kmeansMaxK);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "KMeansForm";

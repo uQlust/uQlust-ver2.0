@@ -199,7 +199,7 @@
             this.distanceControl1.profileName = null;
             this.distanceControl1.reference = false;
             this.distanceControl1.referenceProfile = null;
-            this.distanceControl1.Size = new System.Drawing.Size(613, 130);
+            this.distanceControl1.Size = new System.Drawing.Size(475, 130);
             this.distanceControl1.TabIndex = 77;
             // 
             // uQlustTreeSimple
@@ -222,6 +222,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "uQlustTreeSimple";

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClustersAnalysis));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.process = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cluster = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,26 +96,26 @@
             this.deselectToolStripMenuItem,
             this.analyzeToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(123, 70);
             // 
             // selectAllToolStripMenuItem
             // 
             this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.selectAllToolStripMenuItem.Text = "Select All";
             this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.selectAllToolStripMenuItem_Click);
             // 
             // deselectToolStripMenuItem
             // 
             this.deselectToolStripMenuItem.Name = "deselectToolStripMenuItem";
-            this.deselectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deselectToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.deselectToolStripMenuItem.Text = "Deselect";
             this.deselectToolStripMenuItem.Click += new System.EventHandler(this.deselectToolStripMenuItem_Click);
             // 
             // analyzeToolStripMenuItem
             // 
             this.analyzeToolStripMenuItem.Name = "analyzeToolStripMenuItem";
-            this.analyzeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.analyzeToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.analyzeToolStripMenuItem.Text = "Analyze";
             this.analyzeToolStripMenuItem.Click += new System.EventHandler(this.analyzeToolStripMenuItem_Click);
             // 
@@ -124,6 +125,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(573, 262);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClustersAnalysis";
             this.Text = "ClustersAnalysis";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

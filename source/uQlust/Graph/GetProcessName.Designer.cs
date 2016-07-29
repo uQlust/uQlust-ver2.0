@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GetProcessName));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.OkBtn = new System.Windows.Forms.Button();
@@ -83,6 +84,7 @@
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.OkBtn);
             this.Controls.Add(this.textBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GetProcessName";
             this.Text = "GetProcessName";
             this.ResumeLayout(false);

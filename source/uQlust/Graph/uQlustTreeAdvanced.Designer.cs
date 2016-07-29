@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uQlustTreeAdvanced));
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -236,6 +237,7 @@
             this.distanceControl1.hideSetup = false;
             this.distanceControl1.Location = new System.Drawing.Point(9, 41);
             this.distanceControl1.Name = "distanceControl1";
+            this.distanceControl1.profileInfo = true;
             this.distanceControl1.profileName = null;
             this.distanceControl1.reference = true;
             this.distanceControl1.referenceProfile = null;
@@ -286,6 +288,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "uQlustTreeAdvanced";

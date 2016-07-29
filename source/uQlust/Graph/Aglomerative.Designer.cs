@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Aglomerative));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.distanceControl1 = new Graph.DistanceControl();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,6 +58,7 @@
             this.distanceControl1.hideSetup = false;
             this.distanceControl1.Location = new System.Drawing.Point(12, 33);
             this.distanceControl1.Name = "distanceControl1";
+            this.distanceControl1.profileInfo = true;
             this.distanceControl1.profileName = null;
             this.distanceControl1.reference = true;
             this.distanceControl1.referenceProfile = null;
@@ -106,6 +108,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.distanceControl1);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Aglomerative";
             this.Text = "Hierarchical";
             this.ResumeLayout(false);

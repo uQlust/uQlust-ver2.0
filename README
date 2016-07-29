@@ -1,0 +1,44 @@
+Windows.
+To run uQlust in GUI mode use uQlust.exe file
+
+To run uQlust in batch mode use following command:
+
+uQlustTerminal.exe -f configuration_file
+
+More options one will be seen by running uQlustTerminal.exe without any option.
+
+Linux
+
+First compile libraries libRNA.so and libDSSP.so. To do it just run
+following command in the distribution directory:
+
+make
+
+Tu run uQlust in GUI mode use:
+
+mono uQlust.exe
+
+Batch mode
+
+mono uQlustTerminal.exe -f configuration_file
+
+uQlustTerminal.exe must be in the same directory as uQlust.exe!
+
+In the uQlust distribution one may find five directories:
+data - contains example data sets for protein and rna
+workFlows - contains configuration files for different clustering algorithms
+profiles - defined profiles that can be used in the configuration files
+results - default directory where results of clusterization will be stored
+(can be change in Optiones menu)
+generatedProfiles - default directory where calculated profiles are stored
+
+For example to run uQlustTerminal with provided configuration file (that is taking into account 
+structures from provided data directory) use following command:
+
+uQlustTerminal.exe -f workFlows/protein/uQlust_config_file_1djuryRanking.txt
+
+or for RNA
+
+uQlustTerminal.exe -f workFlows/rna/uQlust_config_file_RNA_1djuryRanking.txt -m RNA
+
+More information about uQlust can be found in manual.

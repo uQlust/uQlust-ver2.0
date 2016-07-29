@@ -32,9 +32,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,15 +71,6 @@
             this.toolStripButton1.Text = "Read order file";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.DefaultExt = "png";
-            this.saveFileDialog1.Filter = "Png files (*.png)| *.png";
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -90,6 +81,15 @@
             this.toolStripButton2.Text = "Save picture";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "png";
+            this.saveFileDialog1.Filter = "Png files (*.png)| *.png";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // VisOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -97,6 +97,7 @@
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VisOrder";
             this.Text = "VisOrder";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VisOrder_FormClosed);

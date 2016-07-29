@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClusterStat));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -43,11 +44,11 @@
             this.button5 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.distanceControl1 = new Graph.DistanceControl();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.distanceControl1 = new Graph.DistanceControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -216,6 +217,25 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "Data path:";
             // 
+            // distanceControl1
+            // 
+            this.distanceControl1.CAtoms = uQlustCore.PDB.PDBMODE.ONLY_CA;
+            this.distanceControl1.distDef = uQlustCore.DistanceMeasures.HAMMING;
+            this.distanceControl1.HideAtoms = false;
+            this.distanceControl1.HideCosine = false;
+            this.distanceControl1.HideHamming = false;
+            this.distanceControl1.hideReference = false;
+            this.distanceControl1.HideRmsdLike = false;
+            this.distanceControl1.hideSetup = false;
+            this.distanceControl1.Location = new System.Drawing.Point(12, 34);
+            this.distanceControl1.Name = "distanceControl1";
+            this.distanceControl1.profileInfo = true;
+            this.distanceControl1.profileName = null;
+            this.distanceControl1.reference = false;
+            this.distanceControl1.referenceProfile = null;
+            this.distanceControl1.Size = new System.Drawing.Size(489, 188);
+            this.distanceControl1.TabIndex = 13;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -241,26 +261,13 @@
             this.Column7.HeaderText = "Distance";
             this.Column7.Name = "Column7";
             // 
-            // distanceControl1
-            // 
-            this.distanceControl1.CAtoms = uQlustCore.PDB.PDBMODE.ONLY_CA;
-            this.distanceControl1.distDef = uQlustCore.DistanceMeasures.HAMMING;
-            this.distanceControl1.HideAtoms = false;
-            this.distanceControl1.hideReference = false;
-            this.distanceControl1.Location = new System.Drawing.Point(12, 34);
-            this.distanceControl1.Name = "distanceControl1";
-            this.distanceControl1.profileName = null;
-            this.distanceControl1.reference = false;
-            this.distanceControl1.referenceProfile = null;
-            this.distanceControl1.Size = new System.Drawing.Size(461, 188);
-            this.distanceControl1.TabIndex = 13;
-            // 
             // ClusterStat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(515, 402);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClusterStat";
             this.Text = "ClusterStat";
             this.splitContainer1.Panel1.ResumeLayout(false);

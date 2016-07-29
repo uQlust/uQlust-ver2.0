@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThresholdCForm));
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.minCluster = new System.Windows.Forms.NumericUpDown();
@@ -116,9 +117,14 @@
             this.distanceControl1.CAtoms = uQlustCore.PDB.PDBMODE.ONLY_CA;
             this.distanceControl1.distDef = uQlustCore.DistanceMeasures.HAMMING;
             this.distanceControl1.HideAtoms = false;
+            this.distanceControl1.HideCosine = false;
+            this.distanceControl1.HideHamming = false;
             this.distanceControl1.hideReference = true;
+            this.distanceControl1.HideRmsdLike = false;
+            this.distanceControl1.hideSetup = false;
             this.distanceControl1.Location = new System.Drawing.Point(12, 143);
             this.distanceControl1.Name = "distanceControl1";
+            this.distanceControl1.profileInfo = true;
             this.distanceControl1.profileName = null;
             this.distanceControl1.reference = true;
             this.distanceControl1.referenceProfile = null;
@@ -151,6 +157,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(353, 195);

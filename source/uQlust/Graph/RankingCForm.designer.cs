@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RankingCForm));
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.jury1d = new System.Windows.Forms.RadioButton();
             this.sift = new System.Windows.Forms.RadioButton();
             this.jury3d = new System.Windows.Forms.RadioButton();
+            this.button3 = new System.Windows.Forms.Button();
             this.distanceControl1 = new Graph.DistanceControl();
             this.jury1DSetup1 = new Graph.jury1DSetup();
-            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button2
@@ -98,14 +99,29 @@
             this.jury3d.UseVisualStyleBackColor = true;
             this.jury3d.CheckedChanged += new System.EventHandler(this.jury3d_CheckedChanged);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(359, 11);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(197, 23);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Use automatically generated profile";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // distanceControl1
             // 
             this.distanceControl1.CAtoms = uQlustCore.PDB.PDBMODE.ONLY_CA;
             this.distanceControl1.distDef = uQlustCore.DistanceMeasures.HAMMING;
             this.distanceControl1.HideAtoms = false;
+            this.distanceControl1.HideCosine = false;
+            this.distanceControl1.HideHamming = false;
             this.distanceControl1.hideReference = false;
+            this.distanceControl1.HideRmsdLike = false;
+            this.distanceControl1.hideSetup = false;
             this.distanceControl1.Location = new System.Drawing.Point(2, 129);
             this.distanceControl1.Name = "distanceControl1";
+            this.distanceControl1.profileInfo = true;
             this.distanceControl1.profileName = null;
             this.distanceControl1.reference = true;
             this.distanceControl1.referenceProfile = null;
@@ -119,16 +135,6 @@
             this.jury1DSetup1.profileName = null;
             this.jury1DSetup1.Size = new System.Drawing.Size(220, 75);
             this.jury1DSetup1.TabIndex = 2;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(359, 11);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(197, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Use automatically generated profile";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // RankingCForm
             // 
@@ -146,6 +152,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RankingCForm";
