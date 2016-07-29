@@ -7,11 +7,11 @@
 
 
 
-#include "stdafx.h"
+//#include "stdafx.h"
 #define BOOST_USE_WINDOWS_H
 #include "mas.h"
 
-#include <wtypes.h>
+//#include <wtypes.h>
 #include <set>
 #include <numeric>
 #include <functional>
@@ -32,7 +32,7 @@
 #include "buffer.h"
 #include "structure.h"
 
-#define SYSTEM_WINDOWS
+//#define SYSTEM_WINDOWS
 
 #ifndef SYSTEM_WINDOWS
 #define LPSTR char *

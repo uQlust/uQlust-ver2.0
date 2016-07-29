@@ -12,7 +12,7 @@
 #include "nrutil.h"
 #include "rna.h"
 
-#define SYSTEM_WINDOWS
+//#define SYSTEM_WINDOWS
 
 
 #ifdef SYSTEM_WINDOWS

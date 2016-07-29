@@ -4,7 +4,7 @@
 //             http://www.boost.org/LICENSE_1_0.txt)      
 //
 // A DSSP reimplementation
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "mas.h"
 
 #if defined(_MSC_VER)

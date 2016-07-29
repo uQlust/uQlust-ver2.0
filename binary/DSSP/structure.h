@@ -304,7 +304,7 @@ class MChain
 	char*				GetSEQ();
 	MResidue*			GetResidueBySeqNumber(uint16 inSeqNumber, char inInsertionCode);
 	
-	//void				GetSequence(std::string& outSequence) const;
+	void				GetSequence(std::string& outSequence) const;
 
 	void				Translate(const MPoint& inTranslation);
 	void				Rotate(const MQuaternion& inRotation);

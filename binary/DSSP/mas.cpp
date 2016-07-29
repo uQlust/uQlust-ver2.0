@@ -4,7 +4,7 @@
 //             http://www.boost.org/LICENSE_1_0.txt)      
 // 
 // mas.cpp - simple attempt to write a multiple sequence alignment application
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "mas.h"
 
 #include <algorithm>

@@ -4,7 +4,7 @@
 //             http://www.boost.org/LICENSE_1_0.txt)      
 // 
 // 3d routines
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "mas.h"
 
 #include <valarray>
