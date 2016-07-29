@@ -27,7 +27,7 @@ Cluster algorithm to be used (available: uQlustTree, HKmeans, HierarchicalCluste
 ##########                                            ##########
 ########## Profile type to be used is defined by an xml file defined below ##########
 ########## Parameters Parameters hierarchical #######################
-Use 1DJury to find reference vectors in hash# False
+Use 1DJury to find reference vectors in hash# True
 Path to the profile for 1djury hash# profiles/CA-CM.profiles
 Path to the profile for weighted hamming distance [HIERARCHICAL]# profiles/CA-CM_distance.profile
 Path to the profile for 1djury for consensus [HIERARCHICAL]# profiles/CA-CM.profiles
@@ -35,7 +35,7 @@ Distance measures used for clustering# HAMMING
 Needed for aglomerative clustering, defines type of linkage# AVERAGE
 ########## End ##########
 ########## Parameters Hash ##########
-Percent of data that must be in the relevant clusters# 90
+Percent of data that must be in the relevant clusters# 100
 Number of relevant clusters# 1000
 Profile name# profiles/CA-CM.profiles
 Combine clusters based on the hamming distance between them# True

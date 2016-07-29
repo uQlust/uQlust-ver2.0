@@ -1,5 +1,5 @@
 ########## This is the overall config file for uQlust ##########
-##########               uQlust ver. 1.0              ##########
+##########               uQlust ver. 2.0              ##########
 ########## Based on Adamczak and Meller 2011, 2015    ##########
 ########## Please see uQlust_manual.pdf for details   ##########
 ##########    Beware of broken lines. Good luck!      ##########

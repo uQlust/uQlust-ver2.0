@@ -1,5 +1,5 @@
 ########## This is the overall config file for uQlust ##########
-##########               uQlust ver. 1.0              ##########
+##########               uQlust ver. 2.0              ##########
 ########## Based on Adamczak and Meller 2011, 2015    ##########
 ########## Please see uQlust_manual.pdf for details   ##########
 ##########    Beware of broken lines. Good luck!      ##########
@@ -28,7 +28,7 @@ Cluster algorithm to be used (available: uQlustTree, HKmeans, HierarchicalCluste
 ########## Profile type to be used is defined by an xml file defined below ##########
 ##### Parameters Hash #######################
 Number of relevant clusters# 10
-Percent of data that must be in the relevant clusters# 90
+Percent of data that must be in the relevant clusters# 60
 Use 1Djury to find consesnsus states # True
 Profile name# profiles/FragBag.profiles
 Combine clusters based on the hamming distance between them# False
