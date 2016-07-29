@@ -2190,9 +2190,7 @@ void MProtein::GetSequence(char inChain, sequence& outSequence) const
 {
 	int error=0;
 	ifstream infile(fileName, ios_base::in | ios_base::binary);
-	cout << "OK\n";
 	error=pr->PrepProt(infile, false);
-	cout << "OK2\n";
 	infile.close();
 	if(error==0)
 		error=pr->CalculateSecondaryStructure();
