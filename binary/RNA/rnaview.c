@@ -260,7 +260,7 @@ struct RNAMemory * work_horse(char *pdbfile, long num_residue, long num,
 			r->secStruct[i] = 'S';
 		r->secStruct[num_residue] = '\0';
 
-        return; 
+        return 0; 
     }
 
     ntot = 2*num_pair_tot;
@@ -343,7 +343,7 @@ extern __declspec(dllexport) void __stdcall GetError()
 	void GetError()
 #endif
 	{
-		return 0;// errorNum;
+		return ;// errorNum;
 	}
 
 
