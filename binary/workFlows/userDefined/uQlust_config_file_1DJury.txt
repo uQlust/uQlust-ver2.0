@@ -8,7 +8,7 @@
 ##########          INPUT SECTION                     ##########
 ##########                                            ##########
 ########## Input files with structures or models to be analyzed are defined below ##########
-Path to data directory# data/userDefined/Farna_1a4d_dssr;
+List of aligned profile files# data/userDefined/Farna_1a4d_dssr;
 ##########    End of input file section               ##########
 ##########                                            ##########
 ##########          OUTPUT SECTION                    ##########
