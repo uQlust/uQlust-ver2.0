@@ -1,44 +1,70 @@
-Windows.
-To run uQlust in GUI mode use uQlust.exe file
+===========================================
+              uQlust ver. 2.0
+Efficient Macromolecular Structure Analysis
+===========================================
 
-To run uQlust in batch mode use following command:
+This file contains a brief instruction as to how to run uQlust
+and get started performing clustering or ranking of macromolecular
+(protein or RNA) structure. For more information, please see
+the manual.
+
+======================
+Windows
+======================
+
+In order to run uQlust in GUI mode use uQlust.exe file
+
+To run uQlust in batch mode use the following command:
 
 uQlustTerminal.exe -f configuration_file
 
-More options one will be seen by running uQlustTerminal.exe without any option.
-
+=======================
 Linux
+=======================
 
 First compile libraries libRNA.so and libDSSP.so. To do it just run
-following command in the distribution directory:
+the following command in the distribution directory:
 
 make
 
-Tu run uQlust in GUI mode use:
+In order to run uQlust in GUI mode use:
 
 mono uQlust.exe
 
-Batch mode
+Batch mode:
 
 mono uQlustTerminal.exe -f configuration_file
 
-uQlustTerminal.exe must be in the same directory as uQlust.exe!
+Note that uQlustTerminal.exe must be in the same directory as uQlust.exe!
 
-In the uQlust distribution one may find five directories:
-data - contains example data sets for protein and rna
-workFlows - contains configuration files for different clustering algorithms
-profiles - defined profiles that can be used in the configuration files
-results - default directory where results of clusterization will be stored
-(can be change in Optiones menu)
-generatedProfiles - default directory where calculated profiles are stored
+========================
 
-For example to run uQlustTerminal with provided configuration file (that is taking into account 
-structures from provided data directory) use following command:
+More options can be displayed by running uQlustTerminal.exe without any option.
 
-uQlustTerminal.exe -f workFlows/protein/uQlust_config_file_1djuryRanking.txt
+uQlust can be run in GUI or batch mode. The former provides a number of pre-loaded workflows that can be explored using the 'easy' mode.
+
+========================
+
+For example, in order to run uQlustTerminal with a predefined workflow to rank a set of protein models (see data directory) use the following command:
+
+uQlustTerminal.exe -f workFlows/protein/uQlust_config_file_1DJury.txt
 
 or for RNA
 
-uQlustTerminal.exe -f workFlows/rna/uQlust_config_file_RNA_1djuryRanking.txt -m RNA
+uQlustTerminal.exe -f workFlows/rna/uQlust_config_file_RNA_1DJury.txt -m RNA
 
-More information about uQlust can be found in manual.
+========================
+
+The following five directories are included in the uQlust distribution:
+
+data - contains example data sets for protein and rna
+workFlows - contains configuration files for typical use cases
+profiles - contains pre-defined profiles that can be used in uQlust
+results - the default directory to store the results
+generatedProfiles - contains intermediate profiles generated when running uQlust
+
+=========================
+
+Since uQlust is written in C#, it is compiled to a bytecode (CIL) which is contained within the uQlust.exe file. Thus, the main uQlust module does not need re-compiling. However, two additional modules based on C/C++ distributions of DSSP and RNAview utilities (kindly made available by their authors - see references) do need to be compiled into libDSSP.so and libRNA.so files. In order to create these two files, just run the 'make' command in the main distribution directory (referred to as uQlustDistr). The boost library is used to compile the DSSP module and create libDSSP.so. Check if the files libDSSP.so and libRNA.so have been created in the main uQlust directory, which contains the uQlust.exe file. Similar steps, i.e. installing mono and boost libraries, and re-compiling DSSP and RNAview libraries, should work on Mac OS as well.
+
+More information about uQlust can be found in the manual provided with the distribution and also available at http://github.com/uQlust.
