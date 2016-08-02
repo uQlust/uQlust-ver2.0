@@ -370,7 +370,7 @@ namespace uQlustCore
 
         public override string ToString()
         {
-            return "Aglomerative "+linkageType.ToString();
+            return "Agglomerative "+linkageType.ToString();
         }
         private int LMinimalDist(List<HClusterNode> levelNodes)
         {

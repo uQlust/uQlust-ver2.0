@@ -45,7 +45,7 @@ namespace Graph
         int maxRealDist;
         string measureName;
         public ClosingForm closeForm;
-       
+        bool clearAll = false;
         string winName;
         int mposX, mposY;
         public override string ToString()
@@ -372,6 +372,7 @@ namespace Graph
         }
         private void Form2_ResizeEnd(object sender, EventArgs e)
         {
+            clearAll = true;
             buffer = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             PrepareGraphNodes(buffer);
             DrawOnBuffer(buffer,true,1,Color.Empty);
@@ -482,6 +483,7 @@ namespace Graph
         }
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
+         
            if (currentHeight == pictureBox1.Height && currenWidth == pictureBox1.Width && buffer!=null && currentRootNode==rootNode)
             {
                 e.Graphics.Clear(this.BackColor);
@@ -517,8 +519,12 @@ namespace Graph
               
                 if (hnode != null)
                 {
-/*                    e.Graphics.Clear(this.BackColor);
-                    e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                    if (clearAll)
+                    {
+                        e.Graphics.Clear(this.BackColor);
+                        clearAll = false;
+                    }
+/*                    e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
                     e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;*/
                     if (buffer == null || buffer.Width != pictureBox1.Width || buffer.Height != pictureBox1.Height)
                     {

@@ -83,7 +83,7 @@ namespace Graph
             else
             {
                 string hammingProfile = jury1DSetup1.profileName;
-                hammingProfile=hammingProfile.Replace(".profiles", "_distance.profiles");
+                hammingProfile=hammingProfile.Replace(".profiles", "_distance.profile");
                 localOpt.hierarchical.hammingProfile = hammingProfile;
 
                 localOpt.hierarchical.reference1DjuryH = true;

@@ -119,9 +119,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(3, 59);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 13);
+            this.label7.Size = new System.Drawing.Size(102, 13);
             this.label7.TabIndex = 4;
-            this.label7.Text = "Number of children\'s: ";
+            this.label7.Text = "Number of children: ";
             // 
             // label6
             // 
@@ -155,9 +155,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 13);
+            this.label3.Size = new System.Drawing.Size(96, 13);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Reference structure: ";
+            this.label3.Text = "Centroid structure: ";
             // 
             // label1
             // 

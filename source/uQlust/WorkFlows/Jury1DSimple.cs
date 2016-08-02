@@ -45,15 +45,19 @@ namespace WorkFlows
             InitializeComponent();
             dialog = folderBrowserDialog1;
             if (set.mode == INPUTMODE.USER_DEFINED)
+            {
                 dialog = openFileDialog1;
+                label1.Text = "Choose user defined file with profiles";
+            }
             this.parent = parent;
             this.Location = parent.Location;
+            this.set = set;
             if (fileName != null)
             {
                 opt.ReadOptionFile(fileName);
                 SetProfileOptions();
             }
-            this.set = set;
+         
             this.results = results;
             if (opt.other.juryProfile != null)
             {
@@ -63,6 +67,12 @@ namespace WorkFlows
         }
         void SetProfileOptions()
         {
+            if (set!=null && set.mode == INPUTMODE.USER_DEFINED)
+            {
+                if (opt.profileFiles.Count > 0)
+                    textBox1.Text = opt.profileFiles[0];
+            }
+            else
             if (opt.dataDir.Count > 0)
                 textBox1.Text = opt.dataDir[0];
             label3.Text = opt.other.juryProfile;
@@ -103,6 +113,7 @@ namespace WorkFlows
         private void button2_Click(object sender, EventArgs e)
         {
             opt.dataDir.Clear();
+            opt.profileFiles.Clear();
             if (set.mode == INPUTMODE.USER_DEFINED)
                 opt.profileFiles.Add(textBox1.Text);
             else

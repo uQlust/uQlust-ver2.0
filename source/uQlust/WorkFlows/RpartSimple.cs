@@ -46,14 +46,18 @@ namespace WorkFlows
             this.parent = parent;
             dialog = folderBrowserDialog1;
             if (set.mode == INPUTMODE.USER_DEFINED)
+            {
                 dialog = openFileDialog1;
+                label1.Text = "Choose user defined file with profiles";
+            }
             this.Location = parent.Location;
+            this.set = set;
             if (fileName != null)
             {
                 opt.ReadOptionFile(fileName);
                 SetProfileOptions();
             }
-            this.set = set;
+          
             this.results = results;
             if (opt.hash.profileName!=null)
             {
@@ -68,8 +72,15 @@ namespace WorkFlows
         }
         void SetProfileOptions()
         {
-            if (opt.dataDir.Count > 0)
-                textBox1.Text = opt.dataDir[0];
+            if (set.mode == INPUTMODE.USER_DEFINED)
+            {
+                if (opt.profileFiles.Count > 0)
+                    textBox1.Text = opt.profileFiles[0];
+            }
+            else
+                if (opt.dataDir.Count > 0)
+                    textBox1.Text = opt.dataDir[0];
+
             label3.Text = opt.hash.profileName;
             relevantC.Value = opt.hash.relClusters;
             percentData.Value = opt.hash.perData;
@@ -101,6 +112,7 @@ namespace WorkFlows
         void button2_Click(object sender, EventArgs e)
         {
             opt.dataDir.Clear();
+            opt.profileFiles.Clear();
             if (set.mode == INPUTMODE.USER_DEFINED)
                 opt.profileFiles.Add(textBox1.Text);
             else

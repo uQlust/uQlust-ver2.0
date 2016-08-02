@@ -89,8 +89,7 @@ namespace uQlustCore
         public string profiles1DJuryMeasureFile;
         [Description("Cluster algorithm to be used (available: uQlustTree, HKmeans, HierarchicalCluster, FastHCluster, Kmeans, ThresholdCluster, Jury1D, Jury3D, Sift)")]
         public List<ClusterAlgorithm> clusterAlgorithm=new List<ClusterAlgorithm>();
-        [Description("Distance measure to be used [MAXSUB, RMSD, JURY1D]")]
-        public Settings settings { get; set; }
+        //[Description("Distance measure to be used [MAXSUB, RMSD, JURY1D]")]
         public RankingCInput other=new RankingCInput();
         public HierarchicalCInput hierarchical=new HierarchicalCInput();
         public ThresholdCInput threshold=new ThresholdCInput();        
@@ -251,10 +250,8 @@ namespace uQlustCore
         {
             //string dir = Environment.GetEnvironmentVariable("CLUSTER");
             string dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-
             if (dir != null && !defaultFileName.Contains(Path.DirectorySeparatorChar))
                 defaultFileName = dir + Path.DirectorySeparatorChar + defaultFileName;
-
             return defaultFileName;
         }
         public void ReadDefaultFile()

@@ -199,7 +199,7 @@
             this.distanceControl1.profileName = null;
             this.distanceControl1.reference = false;
             this.distanceControl1.referenceProfile = null;
-            this.distanceControl1.Size = new System.Drawing.Size(475, 130);
+            this.distanceControl1.Size = new System.Drawing.Size(573, 130);
             this.distanceControl1.TabIndex = 77;
             // 
             // uQlustTreeSimple
