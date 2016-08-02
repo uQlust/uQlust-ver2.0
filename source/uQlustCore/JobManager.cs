@@ -642,32 +642,32 @@ namespace uQlustCore
                         switch (alg)
                         {
                             case ClusterAlgorithm.uQlustTree:
-                                RunHashDendrogCombine(currentProcessName, null,item);
+                                RunHashDendrogCombine(currentProcessName, item,item);
                                 //RunHashDendrog(currentProcessName, null, item);
                                 break;
                             case ClusterAlgorithm.HashCluster:
-                                RunHashCluster(currentProcessName, null, item);
+                                RunHashCluster(currentProcessName, item, item);
                                 break;
                             case ClusterAlgorithm.HierarchicalCluster:
-                                RunHierarchicalCluster(currentProcessName, null, item);
+                                RunHierarchicalCluster(currentProcessName, item, item);
                                 break;
                             case ClusterAlgorithm.HKmeans:
-                                RunHKMeans(currentProcessName, null, item);
+                                RunHKMeans(currentProcessName, item, item);
                                 break;
                             case ClusterAlgorithm.FastHCluster:
-                                RunFastHCluster(currentProcessName, null, item);
+                                RunFastHCluster(currentProcessName, item, item);
                                 break;
                             case ClusterAlgorithm.Kmeans:
-                                RunKMeans(currentProcessName, null, item);
+                                RunKMeans(currentProcessName, item, item);
                                 break;
                             case ClusterAlgorithm.BakerCluster:
-                                RunBakerCluster(currentProcessName, null, item);
+                                RunBakerCluster(currentProcessName, item, item);
                                 break;
                             case ClusterAlgorithm.Jury1D:
-                                Run1DJury(currentProcessName, null, item);
+                                Run1DJury(currentProcessName, item, item);
                                 break;
                             case ClusterAlgorithm.Jury3D:
-                                Run3DJury(currentProcessName, null, item);
+                                Run3DJury(currentProcessName, item, item);
                                 break;
                         }
                         counter++;

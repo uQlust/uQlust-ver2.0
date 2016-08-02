@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uQlustTreeAdvanced));
             this.button3 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -64,15 +63,6 @@
             this.button3.Text = "Use automatically generated profile";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 46);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 26);
-            this.label4.TabIndex = 66;
-            this.label4.Text = "1Djury profile to find\r\n representative structure";
             // 
             // groupBox1
             // 
@@ -180,7 +170,6 @@
             // 
             this.groupBox2.Controls.Add(this.jury1DSetup1);
             this.groupBox2.Controls.Add(this.radioButton4);
-            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.radioButton3);
             this.groupBox2.Controls.Add(this.relevantC);
             this.groupBox2.Controls.Add(this.groupBox1);
@@ -196,7 +185,7 @@
             // 
             // jury1DSetup1
             // 
-            this.jury1DSetup1.Location = new System.Drawing.Point(158, 21);
+            this.jury1DSetup1.Location = new System.Drawing.Point(16, 14);
             this.jury1DSetup1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.jury1DSetup1.Name = "jury1DSetup1";
             this.jury1DSetup1.profileName = null;
@@ -234,7 +223,7 @@
             this.distanceControl1.HideHamming = false;
             this.distanceControl1.hideReference = true;
             this.distanceControl1.HideRmsdLike = false;
-            this.distanceControl1.hideSetup = false;
+            this.distanceControl1.hideSetup = true;
             this.distanceControl1.Location = new System.Drawing.Point(9, 41);
             this.distanceControl1.Name = "distanceControl1";
             this.distanceControl1.profileInfo = true;
@@ -308,7 +297,6 @@
         #endregion
 
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;

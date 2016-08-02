@@ -49,6 +49,8 @@ namespace Graph
             {
                 HideSetup = value;
                 button5.Visible = !value;
+                label1.Visible = !value;
+                label16.Visible = !value;
             }
             get
             {
@@ -305,7 +307,7 @@ namespace Graph
         }
         public void HideReference()
         {
-            this.Size = new Size(461, 123) ;
+            this.Size = new Size(this.Size.Width, 123) ;
             referenceBox.Visible = false;
             jury1DSetup1.Visible = false;
 
@@ -379,11 +381,13 @@ namespace Graph
             groupBox1.Visible = false;
             if (radio1DJury.Checked || radioEucl.Checked)
             {
-                if(!hideSetup)
+                if (!hideSetup)
+                {
                     button5.Visible = true;
-                label1.Visible = true;
-                label2.Visible = true;
-                label16.Visible = true;
+                    label1.Visible = true;
+                    label2.Visible = true;
+                    label16.Visible = true;
+                }
                 if(profileFileName!=null && profileFileName.Length>0)
                     label16.Text = LabelActiveProfiles(profileFileName);
 

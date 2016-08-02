@@ -58,10 +58,11 @@ namespace uQlustTerminal
             {
                 Console.WriteLine("Some of the profiles are not available: ", ex.Message);
             }
-            foreach(var item in InternalProfilesManager.internalList)
+            //Console.WriteLine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+            /*foreach(var item in InternalProfilesManager.internalList)
             {
                 Console.WriteLine("profile=" + item);
-            }
+            }*/
             if (args.Length == 0)
             {
                 Console.WriteLine("Following argument is required:");
@@ -202,15 +203,27 @@ namespace uQlustTerminal
             {
                 Console.WriteLine("Exception : " + ex.Message);
             }
-
             if (manager.clOutput.Count > 0)
             {
                 foreach (var item in manager.clOutput.Keys)
                 {
                     clusterOut.output = manager.clOutput[item];
-                    clusterOut.SCluster(manager.clOutput[item].clusterType+"_"+opt.outputFile);
+                    string clustName = manager.clOutput[item].clusterType;
+                    if(clustName.Contains(":"))
+                    {
+                        clustName=clustName.Replace(':', '-');
+                    }
+                    clusterOut.output.SaveTxt(clustName + "_" + opt.outputFile);
+                    //clusterOut.SCluster(clustName+"_"+opt.outputFile);
                     if (binary)
-                        ClusterOutput.Save(opt.outputFile + "_" + item + ".cres", clusterOut.output);
+                    {
+                        string fileName=opt.outputFile + "_" + item + ".cres";
+                        StreamWriter file = new StreamWriter(fileName);
+
+                        file.Close();
+                        ClusterOutput.Save(opt.outputFile + "_" + item + ".cres0", clusterOut.output);
+
+                    }
                 }
             }
             if (times)

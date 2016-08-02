@@ -28,6 +28,7 @@ namespace Graph
         {
             Settings.gFileName = "Settings.clu";
             Options.defaultFileName = "default.options";
+            Rna_Protein_UserDef.results.Hide();
             AdvancedVersion adv = new AdvancedVersion(this);
             this.Hide();
             adv.Show();
