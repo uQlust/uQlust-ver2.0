@@ -62,7 +62,7 @@ namespace Graph
             if (Rmsd.Checked)
                 textBox1.Text = "2";
             else
-                textBox1.Text = "0.2";
+                textBox1.Text = "0.02";
         }
 
      

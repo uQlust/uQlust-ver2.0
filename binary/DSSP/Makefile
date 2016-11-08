@@ -4,7 +4,7 @@ CC = g++
 	CFLAGS = -O3 -lm 
 
 	FLAGS = -O3 
-LDFLAGS= -shared
+LDFLAGS= -shared -L/opt/local/lib -lboost_system-mt
 SOURCES = $(shell echo *.cpp)
 HEADERS = $(shell echo *.h)
 OBJECTS = $(SOURCES:.cpp=.o)

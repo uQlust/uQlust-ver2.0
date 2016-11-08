@@ -245,6 +245,7 @@ namespace uQlustCore.Profiles
                         MakeProfiles(strName, pdbs.molDic[strName], wr);
                     }
                     pdbs.molDic.Clear();
+                    ErrorBase.ClearErrors();
                     Interlocked.Increment(ref currentProgress);
                 }
             }
