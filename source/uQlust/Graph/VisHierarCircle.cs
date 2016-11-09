@@ -528,6 +528,7 @@ namespace Graph
         {
             distStep = (this.Size.Height / 2 - stepBegin) / maxDist;
             middleScreen = new Point(this.Size.Width / 2, this.Size.Height / 2);
+            panel1.Refresh();
             this.Invalidate();
         }
 
@@ -674,7 +675,8 @@ namespace Graph
                 if (res == DialogResult.OK)
                 {
                     Bitmap bmp = new Bitmap(resForm.WidthR, resForm.HeightR);
-                    DrawOnBuffer(bmp, false);
+
+                    DrawOnBuffer(bmp, resForm.ShowLegend);
                     //DrawOnBuffer(bmp, resForm.ShowLegend, resForm.LineThickness, resForm.LinesColor);
                     SavePicture(saveFileDialog1.FileName, bmp);
                     //PrepareGraphNodes(buffer);

@@ -21,8 +21,8 @@ namespace uQlustCore
             resTable = new DataTable();
             resTable.Columns.Add("Considered Clusters", typeof(string));
             resTable.Columns.Add("Clusters", typeof(string));
-            resTable.Columns.Add("Rand Index", typeof(string));
             resTable.Columns.Add("Cluster Index", typeof(string));
+            resTable.Columns.Add("Rand Index", typeof(string));
            
         }
         public long  Size(List<List<string>> _out1, List<List<string>> _out2)
@@ -127,8 +127,8 @@ namespace uQlustCore
             for (int l = 0; l < out1.Count; l++)
             {
                 for (int n = 0; n < out1[l].Count; n++)
-                    for (int k = n + 1; k < out1[l].Count; k++,currentV++)
-                        dataEx[GetIndex(allData.Count, allData[out1[l][n]], allData[out1[l][k]])] = 1;
+                    for (int k = n + 1; k < out1[l].Count; k++, currentV++)
+                            dataEx[GetIndex(allData.Count, allData[out1[l][n]], allData[out1[l][k]])] = 1;
 
 
             }
@@ -137,6 +137,9 @@ namespace uQlustCore
             {
                 for (int n = 0; n < out2[l].Count; n++)
                     for (int k = n + 1; k < out2[l].Count; k++)
+                    {
+                        if (!allData.ContainsKey(out2[l][n]) || !allData.ContainsKey(out2[l][k]))
+                            continue;
                         if (dataEx[GetIndex(allData.Count, allData[out2[l][n]], allData[out2[l][k]])] == 0)
                         {
                             dataEx[GetIndex(allData.Count, allData[out2[l][n]], allData[out2[l][k]])] = -1;
@@ -144,7 +147,8 @@ namespace uQlustCore
                             currentV++;
                         }
                         else
-                            a++; 
+                            a++;
+                    }
             }
             for (int l = 0; l < out2.Count; l++)
             {
@@ -152,6 +156,10 @@ namespace uQlustCore
                 {
                     for (int n = 0; n < out2[l].Count; n++)
                         for (int k = 0; k < out2[s].Count; k++)
+                        {
+                            if (!allData.ContainsKey(out2[l][n]) || !allData.ContainsKey(out2[s][k]))
+                                continue;
+
                             if (dataEx[GetIndex(allData.Count, allData[out2[l][n]], allData[out2[s][k]])] == 1)
                             {
                                 c++;
@@ -164,6 +172,7 @@ namespace uQlustCore
                                     currentV++;
                                 }
                             }
+                        }
                 }
             }
 

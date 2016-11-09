@@ -91,8 +91,7 @@ namespace uQlustCore
                     foreach (var cl in clusters)
                         foreach (var target in cl)
                             list.Add(target);
-
-
+                  
                     string native = item.dirName + ".pdb";
                     if (item.dirName.Contains("."))
                     {
@@ -149,7 +148,7 @@ namespace uQlustCore
                                 represent = item.juryLike[i].Key;
                             else
                             {
-                               /* if (clusters.Count > 1)
+                              /*  if (clusters.Count > 1)
                                 {
                                     represent = CLusterRepresent(distance,item.dirName, clusters[i],"",profileName);                             
                                 }
@@ -157,8 +156,8 @@ namespace uQlustCore
                                     represent = clusters[i][0];
                             }
                         }
-                        //int vDist = GetDist(distance, item.dirName, bestToNative.modelName, represent);
-                        int vDist = GetDist(distance, item.dirName, native, represent);
+                        int vDist = GetDist(distance, item.dirName, bestToNative.modelName, represent);
+                        //int vDist = GetDist(distance, item.dirName, native, represent);
                         CheckBest(distance, vDist, represent, ref vOut);
 
                     }
@@ -175,7 +174,8 @@ namespace uQlustCore
                     }
                     else
                         results.Rows.Add(item.name, bestToNative.modelName, bestToNative.value / 100.0, vOut.modelName, vOut.value / 100.0);
-                    if (vOut.value!=errorValue && Math.Abs(vOut.value-bestToNative.value) < distThreshold * 100)
+                    if (vOut.value!=errorValue && vOut.value-bestToNative.value < distThreshold * 100)
+                    //if (vOut.value != errorValue && vOut.value < distThreshold * 100)
                     {
                         fraction++;
                     }
@@ -278,8 +278,11 @@ namespace uQlustCore
            DistanceMeasure dist = null;
            List<string> targets = new List<string>();
 
-          // targets.Add(dirName + Path.DirectorySeparatorChar + item1);
-           targets.Add(item1);
+
+           if(!item1.Contains(dirName))
+            targets.Add(dirName + Path.DirectorySeparatorChar + item1);
+           else
+            targets.Add(item1);
            targets.Add(dirName + Path.DirectorySeparatorChar + item2);
 
            switch (distance)

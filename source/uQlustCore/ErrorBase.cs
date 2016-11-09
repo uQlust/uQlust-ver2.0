@@ -15,7 +15,10 @@ namespace uQlustCore
         }
         public static void AddErrors(string error)
         {
-            errors.Add(error);
+            if(errors.Count<5000)
+                errors.Add(error);
+            if (errors.Count == 5000)
+                errors.Add("There are much more errors but there is not enough room to store them");
         }
         public static List<string> GetErrors()
         {

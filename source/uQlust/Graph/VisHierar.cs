@@ -275,7 +275,7 @@ namespace Graph
                 }                
             }
         }
-        private void FillGraphNodes(HClusterNode localNode)
+     /*   private void FillGraphNodes(HClusterNode localNode)
         {
             if (localNode.joined == null)
                 return;
@@ -316,7 +316,7 @@ namespace Graph
                     FillGraphNodes(localNode.joined[i]);
             }
 
-        }
+        }*/
         void PrepareGraphNodes(Bitmap bmp)
         {
             
@@ -376,6 +376,7 @@ namespace Graph
             buffer = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             PrepareGraphNodes(buffer);
             DrawOnBuffer(buffer,true,1,Color.Empty);
+            pictureBox1.Refresh();
             this.Invalidate();
             maxGraphicsY = pictureBox1.Height-posStart-30;
         }
@@ -521,8 +522,7 @@ namespace Graph
                 {
                     if (clearAll)
                     {
-                        e.Graphics.Clear(this.BackColor);
-                        clearAll = false;
+                        //pictureBox1.Image = null;
                     }
 /*                    e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
                     e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;*/
